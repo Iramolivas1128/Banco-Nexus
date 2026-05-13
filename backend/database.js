@@ -99,3 +99,4 @@ console.log('Cuentas insertadas correctamente');
 }
 
 crearBaseDeDatos();
+
