@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-const uri = 'mongodb://localhost:27017,localhost:27018,localhost:27019/banco_nexus?replicaSet=rs0';
+const uri = 'mongodb://192.168.50.145:27017,192.168.50.145:27018,192.168.50.145:27019/banco_nexus?replicaSet=rs0';
 const client = new MongoClient(uri);
 
 async function crearBaseDeDatos() {

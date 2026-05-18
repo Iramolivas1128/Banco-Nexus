@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  mongo1:
+    image: mongo:latest
+    container_name: mongo_nexus_1
+    command: mongod --replSet rs0 --port 27017 --bind_ip localhost,mongo1
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data1:/data/db
+    networks:
+      - mongo_net
+
+  mongo2:
+    image: mongo:latest
+    container_name: mongo_nexus_2
+    command: mongod --replSet rs0 --port 27018 --bind_ip localhost,mongo2
+    ports:
+      - "27018:27018"
+    volumes:
+      - mongo_data2:/data/db
+    networks:
+      - mongo_net
+
+  mongo3:
+    image: mongo:latest
+    container_name: mongo_nexus_3
+    command: mongod --replSet rs0 --port 27019 --bind_ip localhost,mongo3
+    ports:
+      - "27019:27019"
+    volumes:
+      - mongo_data3:/data/db
+    networks:
+      - mongo_net
+
+volumes:
+  mongo_data1:
+  mongo_data2:
+  mongo_data3:
+
+networks:
+  mongo_net:
+    driver: bridge
