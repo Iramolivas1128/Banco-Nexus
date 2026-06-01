@@ -18,6 +18,7 @@ async function crearBaseDeDatos() {
     const transaccionesCol = db.collection('transacciones');
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     // ---------- CLIENTES ----------
 const clientesData = [
   { curp: 'OICC900101HDFXXX01', nombre: 'Cristhian Olivas', email: 'cristhian@nexus.com' },
@@ -58,6 +59,8 @@ console.log('Cuentas insertadas correctamente');
 
     // ---------- TRANSACCIONES ----------
 =======
+=======
+>>>>>>> Stashed changes
     // CLIENTES 
     const clientesData = [
       { curp: 'OICC900101HDFXXX01', nombre: 'Cristhian Olivas', email: 'cristhian@nexus.com' },
@@ -96,6 +99,9 @@ console.log('Cuentas insertadas correctamente');
 
     // TRANSACCIONES 
     const sucursales = ['CDMX', 'GUADALAJARA', 'MONTERREY', 'LA_PAZ', 'TIJUANA'];
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     const transaccionesData = [];
     const ahora = new Date();
@@ -103,8 +109,13 @@ console.log('Cuentas insertadas correctamente');
       const cuentaNum = `1000${i}`.slice(-5);
       const saldoInicial = cuentasData[i-1].saldo;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       // Generar movimientos previos
       let saldoAcum = saldoInicial - 1000; 
+=======
+      let saldoAcumulado = saldoInicial - 1000;
+
+>>>>>>> Stashed changes
 =======
       let saldoAcumulado = saldoInicial - 1000;
 
@@ -132,7 +143,11 @@ console.log('Cuentas insertadas correctamente');
         });
       }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       // transacción final que iguala el saldo actual
+=======
+      // Apertura
+>>>>>>> Stashed changes
 =======
       // Apertura
 >>>>>>> Stashed changes
@@ -148,7 +163,10 @@ console.log('Cuentas insertadas correctamente');
     await transaccionesCol.insertMany(transaccionesData);
     console.log('Transacciones insertadas');
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     console.log('Base de datos banco_nexus inicializada correctamente');
@@ -160,8 +178,13 @@ console.log('Cuentas insertadas correctamente');
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 crearBaseDeDatos();
 
+=======
+
+module.exports = { crearBaseDeDatos };
+>>>>>>> Stashed changes
 =======
 
 module.exports = { crearBaseDeDatos };
