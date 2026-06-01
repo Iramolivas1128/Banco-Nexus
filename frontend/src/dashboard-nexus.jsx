@@ -7,11 +7,6 @@ export default function DashboardBancoNexus() {
   const [mensaje, setMensaje] = useState('');
   const [montoDeposito, setMontoDeposito] = useState('');
   const [montoRetiro, setMontoRetiro] = useState('');
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
   const [sucursal, setSucursal] = useState('MATRIZ');
   const [estadoReplica, setEstadoReplica] = useState('');
 
